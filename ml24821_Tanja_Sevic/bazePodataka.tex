@@ -11,6 +11,7 @@
 
 \begin{document}
 \maketitle
+\newpage
 \tableofcontents 
 \newpage
 
@@ -22,18 +23,27 @@ Njena poenta je da olakša pristup podacima, pretraživanje, menjanje njihovog s
 \indent \textbf{Baza podataka je strukturirani skup podataka koji se čuva elektronski i kojim upravlja sistem za upravljanje bazama podataka (SGBD), omogućavajući jednostavno čuvanje, pretragu, izmenu i upravljanje informacijama.} \\
 
 \subsection{Zašto su baze podataka važne}
-Baze podataka se koriste svuda oko nas:
-\begin{itemize}
-    \item u školama (spisak učenika i ocena),
-    \item u prodavnicama (spisak proizvoda i cena),
-    \item u bolnicama (kartoni pacijenata),
-    \item na internetu (profili na društvenim mrežama).
-\end{itemize}
-One pomažu da se informacije brzo pronađu i koriste.
+U savremenom svetu, zahvaljujući napretku tehnologije, količina informacija do kojih možemo doći i kojima možemo raspolagati je velika. 
+Danas, u odnosu na greneraciju naših baka i deka, ukoliko želimo da dođemo do određene informacije, na primer, koja hrana ima najviše vlakana, ne moramo tražiti knjigu iz biologije, pa lekciju u kojoj se ta tema obrađuje. 
+Dovoljno je Google-u da postavimo pitanje i pretraživač će nam sam dati odgovor.
+Ovako brzu pretragu nam omogućavaju upravo \textbf{baze podataka}. One omogućavaju da velika količina informacija bude dostupna u svakom trenutku.
+Osim toga, baze podataka te informacije uređuju i skladište. 
+\\
+
 
 \subsection{Primena baze podataka}
-Uzmimo primer iz svakodnevnog života. Kada želimo da pustimo neku pesmu uključimo YouTube i on nam sam na \textit{Glavnoj strani} da predlog pesama koje bismo mogli da pustimo. Da li smo se nekad zapitali na koji način on formira tu listu za nas? \\
-U školi postpoji spisak učenika sa njihovim podacima, to je takođe jedna baza podataka.
+Baze podataka se koriste svuda oko nas:
+\begin{itemize}
+    \item u školama (spisak učenika, predmeta, profesora, ocena, izostanaka),
+    \item u prodavnicama (spisak proizvoda i cena),
+    \item u bolnicama (kartoni pacijenata, datumi pregleda),
+    \item na internetu (profili na društvenim mrežama, onlajn prodavnica, aplikacije za plaćanje računa, sajtovi za puštanje muzike).
+\end{itemize}
+One pomažu da se informacije brzo pronađu i koriste.
+Uzmimo primer iz svakodnevnog života. Kada želimo da pustimo neku pesmu uključimo YouTube i on nam sam na \textit{Glavnoj strani} da predlog pesama koje bismo mogli da pustimo. Da li smo se nekad zapitali na koji način on formira tu listu za nas? 
+YouTube koristi baze podataka u kojima se čuvaju informacije o pesmama i izvođačima koje smo prethodno slušali. Na osnovu tih podataka, sistem nam predlaže sadržaj koji procenjuje da će nam se dopasti. Bez baza podataka, YouTube ne bi mogao da zapamti naše izbore i ne bi svaki korisnik imao prilagođenu pretragu.
+\\
+U školi postpoji spisak učenika sa njihovim podacima, to je takođe jedna baza podataka. 
 \bigskip
 
 \subsection{Sistemi za upravljanje bazama podataka}
@@ -55,15 +65,13 @@ Ti sistemi korisnicima pružaju sve usluge rada sa podacima.
 
 \subsection{Veza baze podataka i informacionih sistema}
 
-\subsection{Modeli baza podataka}
-
 \subsection{Relacione baze}
 
 \subsection{Pojam i tipovi ključeva}
 
 \section{Kreiranje baza podataka}
 
-\subsection{Upoznavanje konkretnog sistema za upravljanje baze podataka}
+\subsection{Upoznavanje konkretnog sistema za upravljanje bazama podataka}
 
 \subsection{Korišćenje unapred kreiranih baza podataka}
 
@@ -85,22 +93,34 @@ Postoji više načina pomoću kojih možemo kreirati tabelu.
 \subsection{Izbor tipa podataka}
 
 \subsection{Postavljanje primarnog ključa}
+\textbf{Primarni ključ} je jedinstvena kolona ili kombinacija kolona u tabeli koja jednoznačno određuje svaki red u toj tabeli. 
+Osnovna svrha primarnog ključa je da osigura integritet podataka tako što sprečava unos duplih ili \textit{null} vrednosti u ključnoj koloni. Može da se koristi kao referenca u drugim tabelama za uspostavljanje veza između različitih tabela. \\
+Kao što je učenicima bitno na kog Marka profesor misli kada kaže da želi da Marko odgovara tako je i u bazi podataka bitna jedinstvenost. 
+Uzmimo primer odeljenja u kom postoje dva učenika koji se isto zovu i prezivaju. Potreban nam je autentičan način da ih razlikujemo. 
+Upravo zbog te autentičnosti, baze podataka zahtevaju primenu \textbf{primarnog ključa} kako 
 
 \subsection{Unos podataka u tabelu}
 
 
 \section{Veza između tabela}
 
+
 \subsection{Pojam veze}
+Kada pravimo bazu podataka, to je kao da pravimo veliki digitalni ormar sa fiokama. Svaka fioka (tabela) čuva određene stvari – na primer, u jednoj su podaci o \textbf{učenicima}, a u drugoj o \textbf{knjigama}.
+Kada imamo više informacija, moramo da ih povežemo da se ne bismo zbunili. To zovemo \textbf{relacije} ili \textbf{odnosi}.
+Evo primera iz škole:
+\begin{itemize}
+    \item Imamo tabelu \textbf{Učenici} (ime, prezime, razred).
+    \item Imamo tabelu \textbf{Knjige} (naslov, pisac).
+\end{itemize}
+Ako želimo da znamo ko je pozajmio koju knjigu, nećemo stalno ponovo upisivati ime učenika pored svake knjige (to troši prostor i pravi nered). Umesto toga, mi \textit{povežemo} te dve tabele. Tako baza „zna” da je Marko iz 5. razreda uzeo knjigu „Hajdi”.
 
 \subsection{Kreiranje veze između tabela}
-
-\subsection{Referencijalni integritet}
 
 \section{Pretraživanje i sortiranje}
 
 \subsection{Traženje informacija u tabeli}
 
-\subsection{Sortiranje, filtriranje i indeksiranje}
+\subsection{Sortiranje i filtriranje}
 
 \end{document}
