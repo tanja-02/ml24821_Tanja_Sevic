@@ -1,9 +1,10 @@
 \documentclass{article}
 \usepackage{graphicx} 
 \usepackage[utf8]{inputenc}    
-\usepackage[T1]{fontenc}         
-\usepackage{lmodern}            
+\usepackage[T1]{fontenc}   
 \usepackage[serbian]{babel}
+\usepackage{lmodern}   
+\usepackage{amsmath}
 
 \title{Baze podataka}
 \author{Tanja Šević}
@@ -17,16 +18,16 @@
 
 \section{Pojam baze podataka}
 \indent \textbf{Baza podataka} je organizovana kolekcija podataka. Umesto da informacije čuvamo u svesci ili tabeli na papiru, baza podataka ih čuva u računaru tako da se lako mogu pretraživati, menjati i koristiti. \\
-Njena poenta je da olakša pristup podacima, pretraživanje, menjanje njihovog sadržaja ili ažuriranje. \\
-\bigskip
+Njena poenta je da olakša pristup podacima, pretraživanje, menjanje njihovog sadržaja ili ažuriranje. 
 
-\indent \textbf{Baza podataka je strukturirani skup podataka koji se čuva elektronski i kojim upravlja sistem za upravljanje bazama podataka (SGBD), omogućavajući jednostavno čuvanje, pretragu, izmenu i upravljanje informacijama.} \\
+\subsection*{Šta je baza podataka?}
+\indent \textbf{Baza podataka je strukturirani skup podataka koji se čuva elektronski i kojim upravlja sistem za upravljanje bazama podataka (SGBD), omogućavajući jednostavno čuvanje, pretragu, izmenu i upravljanje informacijama.} 
 
 \subsection{Zašto su baze podataka važne}
 U savremenom svetu, zahvaljujući napretku tehnologije, količina informacija do kojih možemo doći i kojima možemo raspolagati je velika. 
 Danas, u odnosu na greneraciju naših baka i deka, ukoliko želimo da dođemo do određene informacije, na primer, koja hrana ima najviše vlakana, ne moramo tražiti knjigu iz biologije, pa lekciju u kojoj se ta tema obrađuje. 
-Dovoljno je Google-u da postavimo pitanje i pretraživač će nam sam dati odgovor.
-Ovako brzu pretragu nam omogućavaju upravo \textbf{baze podataka}. One omogućavaju da velika količina informacija bude dostupna u svakom trenutku.
+Dovoljno je Google-u da postavimo pitanje i pretraživač će nam sam dati odgovor. \\
+\indent Ovako brzu pretragu nam omogućavaju upravo \textbf{baze podataka}. One omogućavaju da velika količina informacija bude dostupna u svakom trenutku.
 Osim toga, baze podataka te informacije uređuju i skladište. 
 \\
 
@@ -34,12 +35,13 @@ Osim toga, baze podataka te informacije uređuju i skladište.
 \subsection{Primena baze podataka}
 Baze podataka se koriste svuda oko nas:
 \begin{itemize}
-    \item u školama (spisak učenika, predmeta, profesora, ocena, izostanaka),
-    \item u prodavnicama (spisak proizvoda i cena),
-    \item u bolnicama (kartoni pacijenata, datumi pregleda),
-    \item na internetu (profili na društvenim mrežama, onlajn prodavnica, aplikacije za plaćanje računa, sajtovi za puštanje muzike).
+    \item \textbf{U školama} (spisak učenika, predmeta, profesora, ocena, izostanaka),
+    \item \textbf{U prodavnicama} (spisak proizvoda i cena),
+    \item \textbf{U bolnicama} (kartoni pacijenata, datumi pregleda),
+    \item \textbf{Na internetu} (profili na društvenim mrežama, onlajn prodavnica, aplikacije za plaćanje računa, sajtovi za puštanje muzike).
 \end{itemize}
-One pomažu da se informacije brzo pronađu i koriste.
+
+\indent One pomažu da se informacije brzo pronađu i koriste.
 Uzmimo primer iz svakodnevnog života. Kada želimo da pustimo neku pesmu uključimo YouTube i on nam sam na \textit{Glavnoj strani} da predlog pesama koje bismo mogli da pustimo. Da li smo se nekad zapitali na koji način on formira tu listu za nas? 
 YouTube koristi baze podataka u kojima se čuvaju informacije o pesmama i izvođačima koje smo prethodno slušali. Na osnovu tih podataka, sistem nam predlaže sadržaj koji procenjuje da će nam se dopasti. Bez baza podataka, YouTube ne bi mogao da zapamti naše izbore i ne bi svaki korisnik imao prilagođenu pretragu.
 \\
@@ -49,27 +51,158 @@ U školi postpoji spisak učenika sa njihovim podacima, to je takođe jedna baza
 \subsection{Sistemi za upravljanje bazama podataka}
 Najpoznatiji sistemi za upravljanje bazama podataka su:
 \begin{itemize}
-    \item Oracle Database,
-    \item MySQL,
-    \item Microsoft SQL Server,
-    \item PostgreSQL,
-    \item IBM DB2,
-    \item Redis,
-    \item SQLite.
-\end{itemize}
+   \item \textbf{SQLite} -- Najkorišćeniji jer ne zahteva instalaciju (ugrađen je u aplikacije koje ga koriste) i celu bazu podataka čuva u jendom fajlu. Koriste ga mobilni telefoni.
+    \item \textbf{Oracle Database} -- Veoma moćan i skup sistem. Koriste ga velike institucije poput banaka i vojske jer je izuzetno siguran.
+    \item \textbf{MySQL} -- Jednostavan i besplatni softver. Koriste ga škole, ali i ogromni sajtovi poput Facebook-a i YouTube-a jer je brz i pouzdan.
+    \item \textbf{Microsoft SQL Server} -- Sistem koji je napravio Microsoft. Odlično sarađuje sa ostalim njihovim programima (Windows, Excel).
+    \item \textbf{PostgreSQL} -- Naprednija verzija besplatnih sistema. Često ga koriste naučnici i inženjeri jer može da čuva veoma složene podatke (npr. geografske mape).
+    \item \textbf{IBM DB2} -- Izuzetno izdržljiv sistem, napravljen da radi godinama bez ijedne sekunde prestanka. Koriste ga velike korporacije.
+    \item \textbf{Redis} -- Super-brzi sistem koji podatke čuva u radnoj memoriji (RAM). Koriste ga društvene mreže.
+\end{itemize} 
 Ti sistemi korisnicima pružaju sve usluge rada sa podacima.
 
 \subsection{Razlika između podataka i informacije}
+Često se podatak i informacija koriste kao sinonimi, iako to nisu. Da bismo shvatili razliku hajde prvo da vidimo šta ovi pojmovi predstavljaju.
+
+\subsection*{Šta je podatak?}
+\textbf{Podatak} je neka reč, broj ili simbol koji sam po sebi nema jasno značenje. Ako samo kažemo neki broj ili reč, on nam ne govori ništa korisno dok ga ne stavimo u određeni kontekst.
+
+\begin{itemize}
+    \item \textbf{Primeri podataka:} 38$^\circ$, Sunčano, 15:00, Beograd.
+\end{itemize}
+
+\subsection*{Šta je informacija?}
+
+\textbf{Informacija} nastaje kada podatke obradimo, organizujemo i damo im značenje. Informacija nam pomaže da donesemo neku odluku ili naučimo nešto novo.
+
+\begin{itemize}
+    \item \textbf{Primer informacije:} "Temperatura u \textbf{Beogradu} je \textbf{38} stepeni, biće \textbf{sunčano} danas u \textbf{15:00} časova."
+\end{itemize}
+
+\subsection*{Ključna razlika}
+
+Glavna razlika se može prikazati kroz proces obrade:
+\begin{center}
+    \fbox{\textbf{PODACI}} $\xrightarrow{\text{Obrada}}$ \fbox{\textbf{INFORMACIJA}}
+\end{center}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Karakteristika} & \textbf{Podatak} & \textbf{Informacija} \\ \hline
+Šta je to? & Neka reč, broj & Obrađen i smislen podatak \\ \hline
+Značenje & Sam po sebi ga nema & Ima jasno značenje \\ \hline
+Primer & "12" & "U mom odeljenju ima 12 devojčica" \\ \hline
+\end{tabular}
+\caption{Razlika između podatka i informacije}
+\end{table}
+
+\noindent \textit{Zanimljivost:} Računar je mašina koja neverovatno brzo pretvara milione podataka u korisne informacije koje mi svakodnevno koristimo (na primer, vremenska prognoza na telefonu).
 
 \subsection{Informacioni sistemi}
+Pojam \textbf{informacioni sistemi} najviše nas asocira da je to neka baza podataka koja nam pruža određene informacije. Međutim, informacioni sistemi su mnogo više od obične baze podataka. To je čitav proces u kom ljudi zahvaljujući određenim pravilima (pravila unosa podataka, bezbednosti), podatke pretvaraju u korisne informacije. 
+
+\subsection*{Čemu služe informacioni sistemi?}
+Glavni cilj informacionog sistema je da nam olakša rad i ubrza donošenje odluka. On to radi kroz četiri osnovna koraka:
+\begin{itemize}
+    \item \textbf{Prikupljanje:} Unos podataka u sistem (npr. kada nastavnik upiše tvoju ocenu).
+    \item \textbf{Čuvanje:} Smeštanje tih podataka u baze podataka da se ne bi izgubili.
+    \item \textbf{Obrada:} Računanje i organizacija (npr. sistem sam izračuna tvoj prosek ocena).
+    \item \textbf{Prikazivanje:} Davanje informacija korisniku (npr. ti vidiš svoju ocenu na ekranu telefona).
+\end{itemize}
+
+\subsection*{Gde se sve koriste?}
+Informacioni sistemi su danas svuda oko nas. Bez njih bi svet funkcionisao mnogo sporije i sa mnogo više grešaka. Najčešće ih srećemo:
+\begin{itemize}
+    \item \textbf{U školama:} Za vođenje elektronskih dnevnika, evidenciju učenika i profesora, kao i za rad školske biblioteke.
+    \item \textbf{U prodavnicama:} Za praćenje zaliha proizvoda na rafovima, očitavanje cena bar-kod skenerom i izdavanje računa.
+    \item \textbf{U bolnicama:} Za čuvanje elektronskih kartona pacijenata, zakazivanje pregleda i praćenje rezultata analiza.
+    \item \textbf{Na internetu:} Svaki profil na društvenim mrežama, onlajn prodavnica ili aplikacija za muziku i filmove je zapravo deo jednog velikog sistema.
+    \item \textbf{U bankama:} Za sigurno čuvanje novca, plaćanje karticama i korišćenje bankomata.
+\end{itemize}
+
+\subsection*{Zašto su važni?}
+Bez informacionih sistema, naš svakodnevni život bi izgledao potpuno drugačije. Morali bismo da: podatke tražimo u knjigama, da idemo u banku kako bismo platili račun, ne bi postojali digitalni dnevnici, kasirke u prodavnici bi morale da znaju napamet cenu svakog artikla. Stvari koje čine našu svakodnevicu iziskivale bi više vremena. \\
+
+Glavne prednosti korišćenja ovih sistema su:
+\begin{itemize}
+    \item \textbf{Ušteda vremena} - lako dolazimo do informacija
+    \item \textbf{Smanjenje grešaka} - računari su precizniji od ljudi za pamćenje hiljada cifara
+    \item \textbf{Veća efikasnost} -za isto vreme nam omogućavaju da uradimo mnogo više stvari 
+    \item \textbf{Dostupnost} - podaci su nam uvek dostupni
+\end{itemize}
+
+\textit{Zaključak:} Informacioni sistemi nisu samo tehnologija, već način na koji savremeno društvo funkcioniše, pomažući nam da budemo bolje povezani i informisani.
 
 \subsection{Veza baze podataka i informacionih sistema}
+Kao što smo ranije rekli, informacioni sistemi nisu isto što i baze podataka. 
+Da bismo lakše razumeli, uporedimo ih sa stvarima iz svakodnevnog života:
+\begin{itemize}
+    \item \textbf{Primer iz kuhinje:} Baza podataka je \textbf{frižider} , a informacioni sistem je \textbf{kuvar} koji uzima namirnice iz tog frižidera.
+    \item \textbf{Primer iz biblioteke:} Baze podataka su \textbf{police sa knjigama}, a informacioni sistem je \textbf{bibliotekarka} koja zna gde se koja knjiga nalazi, ko ju je uzeo i kada treba da je vrati.
+\end{itemize}
 
-\subsection{Relacione baze}
+\textit{Zaključak:} Bez baze podataka, informacioni sistem ne bi imao gde da čuva informacije. Sa druge strane, bez informacionog sistema, baza podataka bi bila samo gomila nabacanih podataka. 
+
+\subsection{Relacione baze podataka}
+\textbf{Relacione baze podataka} su tip baza koji se najčešće koristi. Sastoje se od tabela koje su međusobno povezane. 
+\bigskip
+
+\indent \textbf{Relaciona baza podataka je skup digitalnih tabela u kojima su podaci organizovani tako da su međusobno povezani. Reč "relacija" sugeriše da je u pitanju neka veza.} \\
+
+\subsection*{Kako one funkcionišu?}
+Da bi tabela bila deo relacione baze, ona mora da ima tri osnovna dela:
+
+\begin{itemize}
+    \item \textbf{Entitete (tabele)} - Objekti o kojima čuvamo podatke. Zamisli ih kao posebne foldere (npr. tabela \textit{Učenici}, tabela \textit{Nastavnici}, tabela \textit{Ocene}).
+    \item \textbf{Atribute (kolone)} - Osobine tih objekata. Na primer, u tabeli \textit{Učenici} kolone su: \textit{Ime}, \textit{Prezime}, \textit{Razred}.
+    \item \textbf{Primarni ključ (id)} - Jedinstveni broj koji ima svaki red u tabeli. On svaki podatak čini autentičnim (poput JMBG-a).
+\end{itemize}
+
+\subsection*{Zašto su relacione baze najkorišćenije?}
+Relacione baze su kao \textit{digitalni organizator}. Glavne prednosti su što:
+
+\begin{itemize}
+    \item \textbf{Nema ponavljanja podataka:} Podaci o jednom učeniku se pišu samo jednom. Na primer, ako se učenik preseli, promenimo adresu samo na jednom mestu.
+    \item \textbf{Laka pretraga:} Ukoliko unesemo upit: „Pokaži mi sve učenike iz VII-2 koji imaju peticu iz Informatike“, sistem će nam sam napraviti spisak.
+    \item \textbf{Tačnost:} Podaci su uvek tačni jer sistem ne dozvoljava da upišemo ocenu učeniku koji ne postoji u bazi.
+\end{itemize}
 
 \subsection{Pojam i tipovi ključeva}
+U relacionim bazama, \textbf{ključevi} su \textit{specijalne kolone} koje služe za identifikaciju i povezivanje podataka. Bez njih, tabele bi bile samo nepovezani spiskovi. \\
+
+Postoji više tipova ključeva koji omogućavaju da baza bude organizovana i tačna:
+
+\begin{itemize}
+    \item \textbf{Primarni ključ (Primary Key):} \textit{Glavni ključ} koji jedinstveno identifikuje svaki red u tabeli. Svaka tabela mora imati primarni ključ i on mora biti jedinstven. 
+    \begin{itemize}
+        \item \textit{Primer:} U tabeli \textit{Radnici}, \textit{idRadnika} bi bio primarni ključ.
+    \end{itemize}
+    
+    \item \textbf{Strani ključ (Foreign Key):} Služi kao ,,most'' za povezivanje dve tabele. On u jednoj tabeli pokazuje na primarni ključ u drugoj.
+    \begin{itemize}
+        \item \textit{Primer:} U tabeli \textit{Plate}, koristimo \textit{idRadnika} kao strani ključ da bismo povezali isplatu sa pravim radnikom.
+    \end{itemize}
+    
+    \item \textbf{Kandidat za ključ (Candidate Key):} Kolone koje bi mogle biti primarni ključ jer su jedinstvene (npr. JMBG ili broj lične karte).
+
+    \begin{itemize}
+        \item \textit{Primer:} U tabeli \textit{Učenici}, pored ID broja, i \textit{JMBG} i \textit{Broj pasoša} su jedinstveni. Oni su kandidati za ključ.
+    \end{itemize}
+    
+    \item \textbf{Složeni ključ (Composite Key):} Ključ koji se dobija spajanjem dve ili više kolona kako bi se dobila jedinstvenost (npr. \textit{idRadnika} + \textit{idProjekta}).
+    \begin{itemize}
+        \item \textit{Primer:} U bioskopu, kolona \textit{Broj sedišta} se ponavlja u svakoj sali. Tek kada spojimo \textit{Broj sale} i \textit{Broj sedišta}, dobijamo jedinstvenu kombinaciju koja tačno određuje jedno mesto.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \section{Kreiranje baza podataka}
+Da bismo objasnili \textbf{kreiranje baze podataka} potrebno je da navedemo koji sistem koristimo za upravljanje bazom podataka. Uzmimo SQLite zbog svoje jednostavnosti i velike primene.
+
 
 \subsection{Upoznavanje konkretnog sistema za upravljanje bazama podataka}
 
